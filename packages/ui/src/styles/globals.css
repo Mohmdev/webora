@@ -5,6 +5,8 @@
 
 @plugin "tailwindcss-animate";
 
+@import "./layout.css";
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
