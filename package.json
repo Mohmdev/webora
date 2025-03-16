@@ -1,22 +1,26 @@
 {
-  "name": "shadcn-ui-monorepo",
-  "version": "0.0.1",
+  "name": "webora",
+  "version": "v1.0.0-beta.1",
   "private": true,
+  "author": "Mohmdev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mohmdev/webora"
+  },
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
+    "ci": "bun install --frozen-lockfile --production",
+    "update-deps": "rm node_modules bun.lock -rf && bun i",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "biome:check": "biome check .",
-    "biome:format": "biome format .",
-    "biome:lint": "biome lint .",
-    "migrate-to-biome": "node scripts/migrate-to-biome.js"
+    "check": "biome check .",
+    "format": "biome format --write .",
+    "biome:lint": "biome lint --write ."
   },
   "devDependencies": {
     "@workspace/typescript-config": "workspace:*",
     "@workspace/biome-config": "workspace:*",
-    "prettier": "^3.5.3",
     "turbo": "^2.4.4",
     "typescript": "^5.8.2"
   },
