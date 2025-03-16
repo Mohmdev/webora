@@ -13,9 +13,9 @@
     "update-deps": "rm node_modules bun.lock -rf && bun i",
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
     "check": "biome check .",
     "format": "biome format --write .",
+    "lint": "turbo biome:lint",
     "biome:lint": "biome lint --write ."
   },
   "devDependencies": {

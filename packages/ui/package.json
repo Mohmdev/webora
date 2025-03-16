@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "lint": "biome lint .",
+    "biome:lint": "biome lint --write .",
     "format": "biome format --write .",
     "check": "biome check --write ."
   },

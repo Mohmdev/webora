@@ -1,20 +1,15 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "extends": ["./base.json"],
   "linter": {
     "rules": {
       "a11y": {
         "recommended": true
       },
-      "react": {
-        "recommended": true,
-        "noUselessFragments": "error",
-        "useHookAtTopLevel": "error",
-        "noArrayIndexKey": "warn",
-        "noChildrenProp": "error",
-        "noDangerWithChildren": "error",
-        "noVoidElementsWithChildren": "error",
-        "useButtonType": "error",
+      "suspicious": {
+        "noArrayIndexKey": "warn"
+      },
+      "style": {
         "useFragmentSyntax": "warn"
       }
     }

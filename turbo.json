@@ -10,6 +10,9 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "biome:lint": {
+      "dependsOn": ["^biome:lint"]
+    },
     "check-types": {
       "dependsOn": ["^check-types"]
     },
