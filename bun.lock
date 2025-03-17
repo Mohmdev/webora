@@ -38,6 +38,7 @@
       "version": "0.0.0",
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
+        "typescript": "^5.8.2",
       },
     },
     "packages/typescript-config": {
@@ -49,6 +50,7 @@
       "version": "0.0.0",
       "dependencies": {
         "@radix-ui/react-slot": "^1.1.2",
+        "@tailwindcss/postcss": "^4.0.14",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "lucide-react": "^0.482.0",
@@ -60,7 +62,6 @@
         "zod": "^3.24.2",
       },
       "devDependencies": {
-        "@tailwindcss/postcss": "^4.0.14",
         "@turbo/gen": "^2.4.4",
         "@types/node": "^22.13.10",
         "@types/react": "^19.0.10",

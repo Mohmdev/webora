@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/web/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "zeroConfig": true,
+        "installCommand": "bun i --frozen-lockfile",
+        "buildCommand": "bun run turbo build --filter=web",
+        "startCommand": "bun run turbo start --filter=web"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/web/$1"
+    }
+  ]
+}

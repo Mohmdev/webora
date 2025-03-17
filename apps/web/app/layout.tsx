@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google"
+import React from "react"
 import "@workspace/ui/globals.css"
 import { AppLayout } from "@/providers/layout"
 import { Providers } from "@/providers/providers"

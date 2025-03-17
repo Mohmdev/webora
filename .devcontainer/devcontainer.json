@@ -19,7 +19,7 @@
     }
   },
 
-  "postCreateCommand": "bun i -g vercel@latest railway@latest @biomejs/biome@1.9.4",
+  "postCreateCommand": "sudo bun i -g vercel@latest railway@latest @biomejs/biome@1.9.4 && sudo bash -c 'for cmd in vercel vc railway biome; do if [ -f /root/.bun/bin/$cmd ]; then echo \"#!/bin/bash\" > /usr/local/bin/$cmd && echo \"sudo /root/.bun/bin/$cmd \\\"\\$@\\\"\" >> /usr/local/bin/$cmd && chmod +x /usr/local/bin/$cmd; fi; done'",
 
   "remoteUser": "node",
 

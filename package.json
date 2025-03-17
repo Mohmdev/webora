@@ -9,14 +9,16 @@
   },
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "ci": "bun install --frozen-lockfile --production",
+    "ci": "bun install --frozen-lockfile",
     "update-deps": "rm node_modules bun.lock -rf && bun i",
     "build": "turbo build",
     "dev": "turbo dev",
+    "start": "turbo start",
     "check": "biome check .",
     "format": "biome format --write .",
     "lint": "turbo biome:lint",
-    "biome:lint": "biome lint --write ."
+    "biome:lint": "biome lint --write .",
+    "dev:web": "bun --bun run turbo dev --filter=web || (echo 'Shutting down...' && exit 0)"
   },
   "devDependencies": {
     "@workspace/typescript-config": "workspace:*",
