@@ -1,8 +1,7 @@
 {
   "name": "ubuntu-24.04/Node-22/bun",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-  // "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
-
+  // "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
 
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
