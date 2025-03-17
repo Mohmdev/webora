@@ -21,13 +21,15 @@
     "dev:web": "bun --bun run turbo dev --filter=web || (echo 'Shutting down...' && exit 0)"
   },
   "devDependencies": {
-    "@workspace/typescript-config": "workspace:*",
+    "@biomejs/biome": "1.9.4",
     "@workspace/biome-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "turbo": "^2.4.4",
     "typescript": "^5.8.2"
   },
   "packageManager": "bun@1.2.5",
   "engines": {
     "node": ">=22"
-  }
+  },
+  "trustedDependencies": ["@biomejs/biome", "core-js-pure", "sharp"]
 }
