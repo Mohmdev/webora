@@ -1,4 +1,4 @@
-import { cn } from "@workspace/ui/lib/utils"
+import { GeometricBackground } from "@workspace/ui/components/background/geometric-background"
 import React from "react"
 import { ChildrenWrapper } from "./Children"
 import { FooterSection } from "./Footer"
@@ -23,11 +23,12 @@ export function App({ children, header, footer }: AppProps) {
             "--gap-value": "0.75rem",
           } as React.CSSProperties
         }
-        className="min-h-svh flex flex-col justify-between"
+        className="min-h-svh flex flex-col justify-between relative"
       >
         <HeaderSection template={header} />
         <ChildrenWrapper>{children}</ChildrenWrapper>
         <FooterSection template={footer} />
+        <GeometricBackground className="" />
       </main>
     </ThemeProvider>
   )

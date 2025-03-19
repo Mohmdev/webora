@@ -6,9 +6,7 @@
       "use": "@vercel/next",
       "config": {
         "zeroConfig": true,
-        "installCommand": "bun i --frozen-lockfile",
-        "buildCommand": "bun run turbo build --filter=web",
-        "startCommand": "bun run turbo start --filter=web"
+        "installCommand": "bun i --frozen-lockfile"
       }
     }
   ],

@@ -1,20 +1,11 @@
-import { Button } from "@workspace/ui/components/button"
-import { HeroGeometric } from "@workspace/ui/components/shape-landing-hero"
+import { AnimatedTextHero } from "@workspace/ui/components/hero/text-hero"
 
 export default function Page() {
   return (
     <div className="flex min-w-full">
       <div className="flex flex-col min-w-full">
-        <HeroGeometric className="" />
-        <div className="flex flex-col items-center justify-center gap-4 w-full">
-          <h1 className="text-2xl font-bold">Hello World</h1>
-          <Button
-            variant="destructive"
-            size="sm"
-          >
-            Button
-          </Button>
-        </div>
+        <AnimatedTextHero />
+        <div className="flex flex-col items-center justify-center gap-4 w-full"></div>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import { cn } from "@workspace/ui/lib/utils"
 import { Logo } from "@workspace/ui/misc/logo"
-import { ThemeToggle } from "@workspace/ui/misc/theme-switcher"
+import { ThemeToggle } from "@workspace/ui/misc/theme-toggle"
 import Link from "next/link"
 
 const links = [
@@ -40,7 +40,7 @@ interface Footer4Props {
 
 export function Footer4({ className }: Footer4Props) {
   return (
-    <div className={cn("border-b bg-white py-8 dark:bg-transparent w-full", className)}>
+    <div className={cn("py-8 w-full", className)}>
       <div className={cn("flex flex-wrap gap-8 justify-center md:justify-between w-full")}>
         <div className="order-[1] flex items-center gap-2 max-w-[85%] justify-start md:hidden">
           <Logo className="" />
