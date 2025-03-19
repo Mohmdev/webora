@@ -1,7 +1,8 @@
 "use client"
 
-import { Moon, Sun } from "lucide-react"
+import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 import { Button } from "../components/button.js"
 import { cn } from "../lib/utils.js"
 
@@ -11,6 +12,11 @@ interface ThemeToggleProps {
 
 export const ThemeToggle = ({ className }: ThemeToggleProps) => {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <Button
@@ -18,7 +24,17 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
       variant="ghost"
       className={cn("size-8 rounded-full", className)}
     >
-      {theme === "dark" ? <Sun /> : <Moon />}
+      {mounted ? (
+        theme === "dark" ? (
+          <SunIcon />
+        ) : (
+          <MoonIcon />
+        )
+      ) : (
+        <span className="opacity-0">
+          <SunIcon />
+        </span>
+      )}
     </Button>
   )
 }

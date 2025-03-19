@@ -1,16 +1,20 @@
 import { Button } from "@workspace/ui/components/button"
+import { HeroGeometric } from "@workspace/ui/components/shape-landing-hero"
 
 export default function Page() {
   return (
-    <div className="flex  min-w-full">
-      <div className="flex flex-col items-center justify-center gap-4 w-full">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button
-          variant="destructive"
-          size="sm"
-        >
-          Button
-        </Button>
+    <div className="flex min-w-full">
+      <div className="flex flex-col min-w-full">
+        <HeroGeometric className="" />
+        <div className="flex flex-col items-center justify-center gap-4 w-full">
+          <h1 className="text-2xl font-bold">Hello World</h1>
+          <Button
+            variant="destructive"
+            size="sm"
+          >
+            Button
+          </Button>
+        </div>
       </div>
     </div>
   )

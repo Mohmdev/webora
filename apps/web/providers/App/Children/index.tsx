@@ -9,7 +9,7 @@ interface ChildrenProps {
 export function ChildrenWrapper({ children, className }: ChildrenProps) {
   return (
     <article className={cn("flex h-max w-full", className)}>
-      <div className="max-w-screen-3xl w-full mx-auto px-6 py-12">{children}</div>
+      <div className="max-w-screen-3xl w-full mx-auto">{children}</div>
     </article>
   )
 }

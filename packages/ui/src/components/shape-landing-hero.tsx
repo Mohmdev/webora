@@ -75,10 +75,12 @@ function HeroGeometric({
   badge = "Design Collective",
   title1 = "Elevate Your Digital Vision",
   title2 = "Crafting Exceptional Websites",
+  className,
 }: {
   badge?: string
   title1?: string
   title2?: string
+  className?: string
 }) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -94,7 +96,12 @@ function HeroGeometric({
   }
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+    <div
+      className={cn(
+        "relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]",
+        className
+      )}
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
