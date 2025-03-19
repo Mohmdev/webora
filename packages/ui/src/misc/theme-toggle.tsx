@@ -1,8 +1,8 @@
 "use client"
 
 import { cn } from "@workspace/ui/lib/utils"
-import { AnimatePresence, motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
@@ -17,6 +17,19 @@ export const ThemeToggle = ({ className }: ThemeToggleProps) => {
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // Don't render anything until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <button
+        className={cn(
+          "size-8 grid place-items-center rounded-full overflow-hidden relative transition-colors duration-300 cursor-pointer",
+          "disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none",
+          className
+        )}
+      />
+    )
+  }
 
   return (
     <motion.button

@@ -6,7 +6,7 @@
       "use": "@vercel/next",
       "config": {
         "zeroConfig": true,
-        "installCommand": "bun i --frozen-lockfile"
+        "installCommand": "pnpm i --frozen-lockfile"
       }
     }
   ],

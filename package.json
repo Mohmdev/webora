@@ -1,16 +1,15 @@
 {
   "name": "webora",
-  "version": "v1.0.0-beta.1",
+  "version": "v1.1.0-beta.1",
   "private": true,
   "author": "Mohmdev",
   "repository": {
     "type": "git",
     "url": "https://github.com/Mohmdev/webora"
   },
-  "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "ci": "bun install --frozen-lockfile",
-    "update-deps": "rm node_modules bun.lock -rf && bun i",
+    "ci": "pnpm install --frozen-lockfile",
+    "update-deps": "rm node_modules pnpm-lock.yaml -rf && pnpm i",
     "build": "turbo build",
     "dev": "turbo dev",
     "start": "turbo start",
@@ -18,7 +17,7 @@
     "format": "biome format --write .",
     "lint": "turbo biome:lint",
     "biome:lint": "biome lint --write .",
-    "dev:web": "bun --bun run turbo dev --filter=web || (echo 'Shutting down...' && exit 0)"
+    "dev:web": "turbo dev --filter=web || (echo 'Gracefully shutting down server...' && exit 0)"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -27,9 +26,12 @@
     "turbo": "^2.4.4",
     "typescript": "^5.8.2"
   },
-  "packageManager": "bun@1.2.5",
+  "packageManager": "pnpm@10.6.4",
   "engines": {
     "node": ">=22"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "core-js-pure", "sharp"]
   },
   "trustedDependencies": ["@biomejs/biome", "core-js-pure", "sharp"]
 }
