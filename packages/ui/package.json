@@ -35,10 +35,14 @@
     "typescript": "^5.8.2"
   },
   "exports": {
-    "./globals.css": "./src/styles/globals.css",
+    "./globals.css": "./styles/globals.css",
     "./postcss.config": "./postcss.config.mjs",
-    "./lib/*": "./src/lib/*.ts",
-    "./components/*": "./src/components/*.tsx",
-    "./hooks/*": "./src/hooks/*.ts"
+    "./lib/*": "./lib/*.ts",
+    "./components/*": "./components/*.tsx",
+    "./hooks/*": "./hooks/*.ts",
+    "./misc/*": "./misc/*.tsx",
+    "./background/*": "./background/*.tsx",
+    "./hero/*": "./hero/*.tsx",
+    "./styles/*": "./styles/*.css"
   }
 }

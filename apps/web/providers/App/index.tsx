@@ -1,4 +1,4 @@
-import { GeometricBackground } from "@workspace/ui/components/background/geometric-background"
+import { GeometricBackground } from "@workspace/ui/background/geometric-background"
 import React from "react"
 import { ChildrenWrapper } from "./Children"
 import { FooterSection } from "./Footer"

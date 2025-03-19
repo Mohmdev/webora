@@ -1,4 +1,4 @@
-import { AnimatedTextHero } from "@workspace/ui/components/hero/text-hero"
+import { AnimatedTextHero } from "@workspace/ui/hero/text-hero"
 
 export default function Page() {
   return (

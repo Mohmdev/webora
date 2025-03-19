@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@workspace/ui/lib/utils"
+import { cn } from "lib/utils.js"
 import { Circle } from "lucide-react"
 import { animate, motion, useMotionValue, useTransform } from "motion/react"
 import { useEffect, useState } from "react"
