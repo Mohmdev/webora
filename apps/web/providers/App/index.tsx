@@ -28,7 +28,7 @@ export function App({ children, header, footer }: AppProps) {
         <HeaderSection template={header} />
         <ChildrenWrapper>{children}</ChildrenWrapper>
         <FooterSection template={footer} />
-        <GeometricBackground className="" />
+        <GeometricBackground />
       </main>
     </ThemeProvider>
   )

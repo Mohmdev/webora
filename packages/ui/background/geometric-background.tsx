@@ -89,7 +89,7 @@ function GeometricBackground({
 
   return (
     <div className={cn("fixed inset-0 -z-20 h-lvh w-screen", className)}>
-      <div className="relative size-full flex items-center justify-center bg-[#030303]">
+      <div className="relative size-full flex items-center justify-center overflow-hidden bg-[#030303]">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
         <div className="absolute inset-0 overflow-hidden">
           <ElegantShape
