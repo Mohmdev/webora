@@ -24,10 +24,10 @@ export const FlyoutNav: React.FC<FlyoutNavProps> = ({ className }) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   return (
-    <header className={cn("flex", "h-max", "fixed top-0 z-50 w-full text-white", className)}>
+    <div className={cn("flex h-max fixed top-0 z-50 w-screen inset-x-0 text-white", className)}>
       <div
         onMouseLeave={() => setHovered(null)}
-        className="w-full h-max z-50"
+        className="w-full h-max z-50 max-w-screen-3xl mx-auto px-6"
       >
         <motion.nav
           animate={
@@ -44,7 +44,7 @@ export const FlyoutNav: React.FC<FlyoutNavProps> = ({ className }) => {
           }}
           className="flex"
         >
-          <div className="flex flex-row items-center justify-between mx-auto w-full px-6">
+          <div className="flex flex-row items-center justify-between mx-auto w-full">
             <Link
               href="/"
               className="z-50"
@@ -68,7 +68,7 @@ export const FlyoutNav: React.FC<FlyoutNavProps> = ({ className }) => {
         open={mobileNavOpen}
         className="lg:hidden z-25"
       />
-    </header>
+    </div>
   )
 }
 

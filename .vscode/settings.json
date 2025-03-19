@@ -25,7 +25,7 @@
   },
   "css.customData": [".vscode/tailwind.json"],
 
-  "tailwindCSS.experimental.configFile": "./src/styles/frontend/globals.css",
+  "tailwindCSS.experimental.configFile": "./packages/ui/src/styles/globals.css",
   "tailwindCSS.experimental.classRegex": [
     // EVERYTHING
     "([a-zA-Z0-9\\-:]+)"
